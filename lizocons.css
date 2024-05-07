@@ -6,7 +6,7 @@ body {
 
 /* Estilo para la portada */
 .portada {
-    background-image: url('../img/portada.jpg');
+    background-image: url('./img/portada.jpg');
     /* Ruta de tu imagen de fondo */
     /* Add the blur effect */
     filter: blur(3px);
