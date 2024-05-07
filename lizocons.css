@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+body {
+    color: #eee;
+}
+
+/* Estilo para la portada */
+.portada {
+    background-image: url('../img/portada.jpg');
+    /* Ruta de tu imagen de fondo */
+    /* Add the blur effect */
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+
+    /* Full height */
+    height: 95vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portada-texto {
+    /* Black w/opacity/see-through */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+    border-radius: 50px 600px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(94, 94, 94, 0.3);
+    border: 2px solid rgba(94, 94, 94, 0.5);
+}
+
+/* Estilo para el título */
+.titulo-portada {
+    font-size: 4rem;
+    /* Tamaño del título */
+    font-weight: italic;
+    text-shadow: 3px 3px rgba(94, 94, 94, 0.736);
+
+}
+
+/* Estilo para el subtitulo */
+.subtitulo-portada {
+    font-size: 1.5rem;
+    /* Tamaño del subtitulo */
+    text-shadow: 3px 3px rgba(94, 94, 94, 0.736);
+}
+
+/* Estilo para cada sección */
+.section {
+    margin-top: 30px;
+    /* Espacio superior entre secciones */
+    padding: 20px;
+    /* Espacio interno de cada sección */
+    border-top: 1px solid #959595;
+    /* Línea divisoria entre secciones */
+}
+
+/*Contenido container*/
+.contenido-container {
+    background: #fff;
+}
+
+/* Nosotros Container */
+.nosotros-container {
+    background-color: #e0e0e0;
+    padding: 3em;
+}
+
+/* Galeria Container */
+.galeria-container {
+    background-color: #e0e0e0;
+    padding: 2em;
+}
+
+/* Contacto Container */
+.contacto-container {
+    background-color: #e0e0e0;
+    padding: 3em;
+}
+.redes-icon {
+    margin-top: 30px;
+    width: 100px;
+}
+
+/* CAROUSEL */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .portada-texto {
+        width: 100%;
+        /* Cambiar el ancho del texto */
+        max-width: 350px;
+        /* Establecer un ancho máximo */
+        padding: 20px;
+        /* Reducir el padding */
+        border-radius: 15px 3em;
+        /* Reducir el radio del borde */
+        font-size: 2rem;
+        /* Reducir el tamaño del título */
+    }
+
+    .titulo-portada {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo-portada {
+        font-size: 1rem;
+    }
+
+    .nosotros-container img {
+        margin-top: 50px;
+        width: 50%;
+        height: auto;
+    }
+
+    .contacto-container img {
+        margin-bottom: 50px;
+        width: 50%;
+        height: auto;
+    }
+
+    .redes-icon {
+        margin-top: 15px;
+        width: 50px;
+        /* Puedes ajustar el tamaño aquí */
+    }
+
+}
+
+
+/* Fuentes utilizadas */
+.quiksandFont-Medium {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    /*300 from 700*/
+    font-style: normal;
+}
+
+.quiksandFont-Bold {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    /*300 from 700*/
+    font-style: normal;
+}
+
+.exo2Font-Light {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    /*100 to 900*/
+    font-style: normal;
+}
+
+.exo2Font-Medium {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    /*100 to 900*/
+    font-style: normal;
+}
+
+.exo2Font-mediumItalic {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    /*100 to 900*/
+    font-style: italic;
+}
+
+.exo2Font-semiBold {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    /*100 to 900*/
+    font-style: normal;
+}
