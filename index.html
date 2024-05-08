@@ -19,8 +19,8 @@
   <!-- BARRA DE NAVEGACIÓN -->
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-      <a class="navbar-brand ms-2 a-navbar-titulo fw-bold text-warning exo2Font-mediumItalic" href="/">Lizosain
+      <img src='' alt="Logo" width="70" height="50" class="d-inline-block align-text-top navbar-img">
+      <a class="navbar-brand ms-2 a-navbar-titulo fw-bold text-navbar exo2Font-mediumItalic" href="/">Lizosain
         Construcciones</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,13 +29,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a class="nav-link text-navbar-links exo2Font-mediumItalic" aria-current="page" href="/"><i
+                class="fa-solid fa-house"></i> Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-users"></i> Nosotros</a>
+            <a class="nav-link text-navbar-links exo2Font-mediumItalic" href="#"><i class="fa-solid fa-users"></i>
+              Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-circle-info"></i> Contactos</a>
+            <a class="nav-link text-navbar-links exo2Font-mediumItalic" href="#"><i class="fa-solid fa-circle-info"></i>
+              Contactos</a>
           </li>
         </ul>
       </div>
@@ -43,117 +46,112 @@
   </nav>
 
   <!-- PORTADA DE LA PAGINA WEB -->
-  <div class="portada"></div>
-  <div class="portada-texto">
-    <h1 class="titulo-portada exo2Font-mediumItalic" data-aos="zoom-in-left">Lizosain Construcciones</h1>
-    <p class="subtitulo-portada exo2Font-Light" data-aos="zoom-in-right">Tu socio en construcciones de calidad
-    </p>
+  <div class="portada">
+    <!-- Contenido opcional para la portada -->
+    <div class="portada-content">
+      <img src="./img/LOGOS/LC-BLANCO-XL.png" alt="Logo" width="45%" height="auto">
+    </div>
   </div>
 
   <!-- CONTENIDO DE LA PAGINA WEB -->
-  <div class="contenido-container" data-aos="fade-up">
-    <!-- NOSOTROS -->
-    <div class="section text-center nosotros-container" data-aos="flip-up">
-      <div class="row row-cols-1 row-cols-lg-2 g-1 g-lg-5">
-        <!-- CAROUSEL -->
-        <div class="col m-auto">
-          <h1 class="quiksandFont-Bold animate__animated animate__bounce">Acerca de Nosotros</h1>
-          <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam veniam perspiciatis
-            magni, velit doloribus, fuga sed possimus harum eius nemo minima distinctio. Eum officia tenetur deleniti ut
-            reiciendis sit labore officiis eos, natus laborum voluptatum sapiente quasi, at cumque corporis voluptate
-            asperiores, porro nostrum consequuntur. Officia repellat repellendus voluptates impedit facilis facere a,
-            voluptatum sapiente assumenda vero deleniti unde iure perspiciatis ad. Quos veritatis nostrum, voluptate
-            molestiae nam impedit, odio, dolor explicabo corporis dicta doloribus quod consectetur et esse quibusdam
-            repellat reiciendis nobis. Id dolores error quas dolore voluptatum perferendis obcaecati totam at eveniet
-            odio
-            quos, voluptate optio, rerum cupiditate! Accusantium officiis cum dolores, esse fugit ullam. Adipisci
-            aliquid.</p>
+  <div class="contenidos">
+    <!-- Primer DIV: Nuestros Trabajos -->
+       
+    <div class="contenidos__especialidades">
+      <div class="text-center p-5">
+        <h4>Especialidades</h4>
+      </div>
+    </div>
+    <!-- FIN 1ER DIV -->
 
-          <div class="container">
-            <button class="btn btn-outline-primary">Contactarse</button>
-          </div>
+    <!-- Segundo DIV: Otro Contenido -->
+    <div class="contenido__nosotros mt-3">
+      <div class="portada-nosotros">
+        <!-- Contenido opcional para la portada -->
+        <div class="contenido-nosotros_logo">
+          <img src="./img/LOGOS/LC-BLANCO-XL.png" alt="Logo" width="45%" height="auto">
         </div>
-        <div class="col">
-          <img src="./img/logo.png" alt="Logo de la Empresa">
-        </div>
-      </div>
-    </div>
-    <!-- NUESTROS TRABAJOS -->
-    <div class="section text-center galeria-container" data-aos="flip-up">
-      <div class="row row-cols-1 row-cols-lg-2 g-1 g-lg-5">
-        <!-- CAROUSEL -->
-        <div class="col">
-          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="https://img.freepik.com/foto-gratis/siluetas-sitio-construccion_1127-3253.jpg"
-                  class="d-block w-100" alt="Imagen de Prueba">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT54BRJJODXWGNM2-uhgSnb1wY6ImWSe916271hpg_2Zw&s"
-                  class="d-block w-100" alt="Imagen de Prueba">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="https://masaconstrucciones.com.mx/wp-content/uploads/2022/03/Casa-Habitacion-1-1.jpg"
-                  class="d-block w-100" alt="Imagen de Prueba">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-        <div class="col m-auto">
-          <h1 class="quiksandFont-Bold">Nuestros Trabajos</h1>
-          <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam veniam perspiciatis
-            magni, velit doloribus, fuga sed possimus harum eius nemo minima distinctio. Eum officia tenetur deleniti ut
-            reiciendis sit labore officiis eos, natus laborum voluptatum sapiente quasi, at cumque corporis voluptate
-            asperiores, porro nostrum consequuntur. Officia repellat repellendus voluptates impedit facilis facere a,
-            voluptatum sapiente assumenda vero deleniti unde iure perspiciatis ad. Quos veritatis nostrum, voluptate
-            molestiae nam impedit, odio, dolor explicabo corporis dicta doloribus quod consectetur et esse quibusdam
-            repellat reiciendis nobis. Id dolores error quas dolore voluptatum perferendis obcaecati totam at eveniet
-            odio
-            quos, voluptate optio, rerum cupiditate! Accusantium officiis cum dolores, esse fugit ullam. Adipisci
-            aliquid.</p>
-        </div>
-      </div>
-    </div>
-    <!-- CONTACTO -->
-    <div class="section text-center contacto-container" data-aos="flip-up">
-      <div class="row row-cols-1 row-cols-lg-2 g-1 g-lg-5">
-        <div class="col">
-          <img src="./img/contacto.png" alt="Logo de la Empresa">
-        </div>
-        <div class="col m-auto">
-          <h1 class="quiksandFont-Bold">Contacto</h1>
-          <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam veniam perspiciatis
-            magni, velit doloribus, fuga sed possimus harum eius nemo minima distinctio. Eum officia tenetur deleniti ut
-            reiciendis sit labore officiis eos, natus laborum voluptatum sapiente quasi, at cumque corporis voluptate
-            asperiores, porro nostrum consequuntur. Officia repellat repellendus voluptates impedit facilis facere a,
-            voluptatum sapiente assumenda vero deleniti unde iure perspiciatis ad. Quos veritatis nostrum, voluptate
-            molestiae nam impedit, odio, dolor explicabo corporis dicta doloribus quod consectetur et esse quibusdam
-            repellat reiciendis nobis. Id dolores error quas dolore voluptatum perferendis obcaecati totam at eveniet
-            odio
-            quos, voluptate optio, rerum cupiditate! Accusantium officiis cum dolores, esse fugit ullam. Adipisci
-            aliquid.
+        <div class="contenido-nosotros_texto">
+          <p>En <strong>Lizosain Construcciones</strong> como una empresa experimentada en el rubro de la construcción,
+            ofrecemos una
+            amplia gama de servicios profesionales para satisfacer las necesidades de nuestros clientes.
           </p>
 
-          <div class="container">
-            <button class="btn btn-outline-primary">Contactarse</button>
+        </div>
+        <div class="contenido-nosotros_button">
+          <button class="btn btn-outline-light"><span>Solicitar una Cotización</span></button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tercer DIV: Otro Contenido -->
+    <div class="nuestros-trabajos">
+      <div class="text-center p-3">
+        <h1>Galerias</h1>
+      </div>
+      <div class="container-galeria">
+        <div>
+          <div class="content">
+            <h2>Instalaciones</h2>
+            <span>Electricas</span>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <h2>???</h2>
+            <span>???</span>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <h2>Colocación</h2>
+            <span>de Chapas</span>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <h2>Construcción</h2>
+            <span>en General</span>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <h2>Construcción</h2>
+            <span>en General</span>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <h2>Construcción</h2>
+            <span>en General</span>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <h2>Reparación</h2>
+            <span>Electrica</span>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <h2>Diseño</h2>
+            <span>de Planos en 2D</span>
           </div>
         </div>
       </div>
     </div>
+
+
+    <!-- Cuarto DIV: Otro Contenido -->
+    <div class="contenidos__formulario">
+      <div class="text-center p-5">
+        <h4>Formulario</h4>
+      </div>
+    </div>
   </div>
-  </div>
+
+
 
   <!-- FOOTER -->
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top text-light bg-dark">
@@ -161,7 +159,8 @@
       <a href="/" class="mb-3 ms-lg-3 ms-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
         <img src="./img/logo.png" class="bi" width="30" height="24"></img>
       </a>
-      <span class="mb-3 mb-md-0 text-body-secondary exo2Font-semiBold">&copy; 2024 <a href="https://wa.link/4u3f9v" target="_blank" class="text-warning text-decoration-none">Mango Store</a></span>
+      <span class="mb-3 mb-md-0 text-body-secondary exo2Font-semiBold">&copy; 2024 <a href="https://wa.link/4u3f9v"
+          target="_blank" class="text-warning text-decoration-none">Mango Store</a></span>
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-lg-3 me-2">

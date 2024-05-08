@@ -1,212 +1,278 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
 body {
-    color: #eee;
+  color: #eee;
 }
 
-/* Estilo para la portada */
+/* PROPIEDADES NAVBAR */
+.navbar-img {
+  content: url("./img/logos/LC-BLANCO-XL.png");
+}
+.navbar-img:hover {
+  content: url("./img/logos/LC-COLOR-XL.png");
+}
+.text-navbar {
+  color: rgb(38, 129, 204) !important;
+}
+.text-navbar:hover {
+  color: #fff !important;
+}
+.text-navbar-links {
+  color: #fff !important;
+  font-size: 15px !important;
+  font-style: normal;
+  font-weight: bold !important;
+}
+.text-navbar-links:hover {
+  color: rgb(38, 129, 204) !important;
+}
+
+/* Portada */
 .portada {
-    background-image: url('./img/portada.jpg');
-    /* Ruta de tu imagen de fondo */
-    /* Add the blur effect */
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-
-    /* Full height */
-    height: 95vh;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-image: url("./img/portada.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Ajuste para evitar desbordamiento horizontal */
+  width: 100%; /* Añadido */
 }
 
-.portada-texto {
-    /* Black w/opacity/see-through */
-    color: white;
+.portada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(63, 135, 194, 0.6);
+}
+
+.portada-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  /* Ajuste para evitar desbordamiento horizontal */
+  width: 100%; /* Añadido */
+}
+
+.portada-content img {
+  width: 40%;
+  height: auto;
+}
+
+.redes-icon {
+  margin-top: 30px;
+  width: 100px;
+}
+
+/* GALERIA DE NUESTROS TRABAJOS */
+.container-galeria {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  gap: 10px;
+
+  > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.8s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px rgb(0, 60, 255);
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("./img/trabajos/trabajo_1.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("./img/trabajos/trabajo_2.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("./img/trabajos/trabajo_3.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(4) {
+      background: url("./img/trabajos/trabajo_4.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(5) {
+        background: url("./img/trabajos/trabajo_5.jpg")
+          no-repeat 50% / cover;
+    }
+    &:nth-of-type(6) {
+        background: url("./img/trabajos/trabajo_6.jpg")
+          no-repeat 50% / cover;
+    }
+    &:nth-of-type(7) {
+        background: url("./img/trabajos/trabajo_7.jpg")
+          no-repeat 50% / cover;
+    }
+    &:nth-of-type(8) {
+        background: url("./img/trabajos/trabajo_8.jpg")
+          no-repeat 50% / cover;
+    }
+
+    .content {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(60, 83, 161);
+      background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.6755077030812324) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 500px;
+      box-shadow: 1px 3px 15px rgb(82, 114, 221);
+      transform: translatey(-30px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
+}
+
+/* PORTADA CONTENIDO DE NOSOTROS */
+.portada-nosotros {
+  position: relative;
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/961/203/desktop-wallpaper-house-design-architecture-plans-distribution-plans.jpg");
+  height: 75vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Ajuste para evitar desbordamiento horizontal */
+  width: 100%; /* Añadido */
+}
+
+.portada-nosotros::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(63, 135, 194, 0.92);
+}
+
+.contenido-nosotros_logo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  width: 50%; /* Añadido */
+}
+.contenido-nosotros_texto {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  width: 95%; /* Añadido */
+  color: #fff;
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contenido-nosotros_button {
     position: absolute;
-    top: 50%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 50%;
-    padding: 50px;
+    z-index: 4;
     text-align: center;
-    border-radius: 50px 600px;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(94, 94, 94, 0.3);
-    border: 2px solid rgba(94, 94, 94, 0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }.contenido-nosotros_button span {
+    font-size: 15px;
+  }
+
+
+
+.portada-content img {
+  width: 40%;
+  height: auto;
 }
-
-/* Estilo para el título */
-.titulo-portada {
-    font-size: 4rem;
-    /* Tamaño del título */
-    font-weight: italic;
-    text-shadow: 3px 3px rgba(94, 94, 94, 0.736);
-
-}
-
-/* Estilo para el subtitulo */
-.subtitulo-portada {
-    font-size: 1.5rem;
-    /* Tamaño del subtitulo */
-    text-shadow: 3px 3px rgba(94, 94, 94, 0.736);
-}
-
-/* Estilo para cada sección */
-.section {
-    margin-top: 30px;
-    /* Espacio superior entre secciones */
-    padding: 20px;
-    /* Espacio interno de cada sección */
-    border-top: 1px solid #959595;
-    /* Línea divisoria entre secciones */
-}
-
-/*Contenido container*/
-.contenido-container {
-    background: #fff;
-}
-
-/* Nosotros Container */
-.nosotros-container {
-    background-color: #e0e0e0;
-    padding: 3em;
-}
-
-/* Galeria Container */
-.galeria-container {
-    background-color: #e0e0e0;
-    padding: 2em;
-}
-
-/* Contacto Container */
-.contacto-container {
-    background-color: #e0e0e0;
-    padding: 3em;
-}
-.redes-icon {
-    margin-top: 30px;
-    width: 100px;
-}
-
-/* CAROUSEL */
-
-/* Carousel base class */
-.carousel {
-    margin-bottom: 4rem;
-}
-
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-    height: 32rem;
-}
-
-.carousel-item>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 32rem;
-}
-
 
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
-    .portada-texto {
-        width: 100%;
-        /* Cambiar el ancho del texto */
-        max-width: 350px;
-        /* Establecer un ancho máximo */
-        padding: 20px;
-        /* Reducir el padding */
-        border-radius: 15px 3em;
-        /* Reducir el radio del borde */
-        font-size: 2rem;
-        /* Reducir el tamaño del título */
-    }
-
-    .titulo-portada {
-        font-size: 2.5rem;
-    }
-
-    .subtitulo-portada {
-        font-size: 1rem;
-    }
-
-    .nosotros-container img {
-        margin-top: 50px;
-        width: 50%;
-        height: auto;
-    }
-
-    .contacto-container img {
-        margin-bottom: 50px;
-        width: 50%;
-        height: auto;
-    }
-
-    .redes-icon {
-        margin-top: 15px;
-        width: 50px;
-        /* Puedes ajustar el tamaño aquí */
-    }
-
 }
-
 
 /* Fuentes utilizadas */
 .quiksandFont-Medium {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    /*300 from 700*/
-    font-style: normal;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  /*300 from 700*/
+  font-style: normal;
 }
 
 .quiksandFont-Bold {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    /*300 from 700*/
-    font-style: normal;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  /*300 from 700*/
+  font-style: normal;
 }
 
 .exo2Font-Light {
-    font-family: "Exo 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    /*100 to 900*/
-    font-style: normal;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  /*100 to 900*/
+  font-style: normal;
 }
 
 .exo2Font-Medium {
-    font-family: "Exo 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    /*100 to 900*/
-    font-style: normal;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  /*100 to 900*/
+  font-style: normal;
 }
 
 .exo2Font-mediumItalic {
-    font-family: "Exo 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    /*100 to 900*/
-    font-style: italic;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  /*100 to 900*/
+  font-style: italic;
 }
 
 .exo2Font-semiBold {
-    font-family: "Exo 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    /*100 to 900*/
-    font-style: normal;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  /*100 to 900*/
+  font-style: normal;
 }
