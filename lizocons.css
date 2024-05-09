@@ -361,8 +361,30 @@ body {
 }
 
 
+
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
+  /*Nosotros*/
+  .contenido-nosotros_logo {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Añadido */
+  }.contenido-nosotros_logo img {
+    width: 100%;
+  }
+  .contenido-nosotros_texto {
+    top: 62%;
+    left: 50%;
+    width: 85%;
+    font-size: 15px;
+  }
+  .contenido-nosotros_button {
+      top: 85%;
+      left: 50%;
+    }.contenido-nosotros_button span {
+      font-size: 13px;
+    }
 
   /*ESPECIALIDADES GRID*/
   .item{
@@ -371,6 +393,35 @@ body {
   .container-especialidades{
     grid-template-rows: repeat(2, max-content);
     grid-template-columns: repeat(2, calc(3vw + var(--itemWidth)));
+  }
+
+  /*FORMULARIO*/
+  .portada-formulario {
+    height: 155vh;
+    /* Ajuste para evitar desbordamiento horizontal */
+    width: 100%; /* Añadido */
+  }
+
+  .contenido-formulario_titulo {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 100%; /* Añadido */
+    font-size: 15px !important; 
+  }
+  .contenido-formulario_subtitulo {
+    top: 12%;
+    left: 50%;
+    width: 90%; /* Añadido */
+    font-size: 15px;
+  }
+  
+  .contenido-formulario_cuerpo{
+    top: 58%;
+    left: 50%;
+    width: 95%; /* Añadido */
+    font-size: 18px;
+
   }
 }
 
