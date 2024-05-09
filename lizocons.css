@@ -70,7 +70,85 @@ body {
   margin-top: 30px;
   width: 100px;
 }
+/* ESPECIALIDADES */
 
+.item{
+	box-shadow: 
+		inset var(--itemWidthMinus) var(--itemWidthMinus) 0 rgba(63, 135, 194, 1), 
+		inset var(--itemWidth) var(--itemWidthMinus) 0 rgba(63, 194, 85, 0.6), 
+		inset var(--itemWidthMinus) var(--itemWidth) 0 rgba(194, 126, 63, 0.6), 
+		inset var(--itemWidth) var(--itemWidth) 0 rgba(194, 94, 63, 0.6), 
+		0 0 20px silver;
+	transition: box-shadow ease-in-out .6s, color ease-in-out .5s;	
+	width: var(--itemWidth);
+	height: var(--itemWidth);
+	border-radius: 50%;
+	text-align: center;
+	background: center/50%  no-repeat;
+	cursor: pointer;
+	display: grid;
+	color: white;
+	font-size: calc(var(--itemWidth) / 9);
+}
+.item:hover{
+	box-shadow: 
+		inset 0 0 0 transparent, 
+		inset 0 0 0 transparent, 
+		inset 0 0 0 transparent, 
+		inset 0 0 0 transparent, 
+		0 0 20px silver;
+	color: transparent;
+}
+.container-especialidades{
+	--itemWidth: min(120px, 30vw);
+	--itemWidthMinus: calc(-1 * var(--itemWidth));
+  height: max-content;
+	width: max-content;
+	display: grid;
+  align-items: center;
+	grid-template-rows: repeat(2, max-content);
+	grid-template-columns: repeat(10, calc(1vw + var(--itemWidth)));
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.item:first-of-type{
+	background-image: url(./img/iconos/001-techo.png);
+}
+.item:nth-of-type(2){
+	background-image: url(./img/iconos/002-techo-1.png);
+}
+.item:nth-of-type(3){
+	background-image: url(./img/iconos/003-plomera.png);
+}
+.item:nth-of-type(4){
+	background-image: url(./img/iconos/011-bano.png);
+}
+.item:nth-of-type(5){
+	background-image: url(./img/iconos/005-plano.png);
+}
+.item:nth-of-type(6){
+	background-image: url(./img/iconos/006-prototipo.png);
+}
+.item:nth-of-type(7){
+	background-image: url(./img/iconos/007-pared-de-ladrillo.png);
+}
+.item:nth-of-type(8){
+	background-image: url(./img/iconos/008-suelo.png);
+}
+.item:nth-of-type(9){
+	background-image: url(./img/iconos/009-enchufe.png);
+}
+.item:nth-of-type(10){
+	background-image: url(./img/iconos/010-porton.png);
+}
+.item > span {
+	width: 100%;
+  top: 90%;
+  align-items: center;
+	user-select: none; -moz-user-select: none; -webkit-user-select: none;
+}
+.especialidades-titulo {
+  height: 10vh;
+}
 /* GALERIA DE NUESTROS TRABAJOS */
 .container-galeria {
   width: 100%;
@@ -224,8 +302,76 @@ body {
   height: auto;
 }
 
+/* PORTADA CONTENIDO DE FORMULARIO */
+.portada-formulario {
+  position: relative;
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/961/203/desktop-wallpaper-house-design-architecture-plans-distribution-plans.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Ajuste para evitar desbordamiento horizontal */
+  width: 100%; /* Añadido */
+}
+
+.portada-formulario::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(63, 135, 194, 0.92);
+}
+
+.contenido-formulario_titulo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+  width: 50%; /* Añadido */
+  color: #fff;
+}
+.contenido-formulario_subtitulo {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  text-align: center;
+  width: 50%; /* Añadido */
+  color: #fff;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenido-formulario_cuerpo{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  text-align: center;
+  width: 95%; /* Añadido */
+  color: #fff;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
+
+  /*ESPECIALIDADES GRID*/
+  .item{
+    margin-top: 10px;
+  }
+  .container-especialidades{
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: repeat(2, calc(3vw + var(--itemWidth)));
+  }
 }
 
 /* Fuentes utilizadas */
