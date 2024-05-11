@@ -22,3 +22,4 @@ borderSVGs.forEach((borderSVG) => {
     borderSVG.classList.add('animate-border');
   }, 100);
 });
+
