@@ -73,12 +73,11 @@ body {
 /* ESPECIALIDADES */
 
 .item {
-  box-shadow: inset var(--itemWidthMinus) var(--itemWidthMinus) 0
-      rgba(63, 135, 194, 1),
-    inset var(--itemWidth) var(--itemWidthMinus) 0 rgba(63, 194, 85, 0.6),
-    inset var(--itemWidthMinus) var(--itemWidth) 0 rgba(194, 126, 63, 0.6),
-    inset var(--itemWidth) var(--itemWidth) 0 rgba(194, 94, 63, 0.6),
-    0 0 20px silver;
+  box-shadow: inset var(--itemWidthMinus) var(--itemWidthMinus) 0 #fff,
+    inset var(--itemWidth) var(--itemWidthMinus) 0 rgba(63, 135, 194, 1),
+    inset var(--itemWidthMinus) var(--itemWidth) 0 rgba(63, 135, 194, 1),
+    inset var(--itemWidth) var(--itemWidth) 0 rgb(87, 63, 194),
+    0 0 20px rgba(63, 135, 194, 1);
   transition: box-shadow ease-in-out 0.6s, color ease-in-out 0.5s;
   width: var(--itemWidth);
   height: var(--itemWidth);
@@ -87,14 +86,31 @@ body {
   background: center/50% no-repeat;
   cursor: pointer;
   display: grid;
-  color: white;
-  font-size: calc(var(--itemWidth) / 9);
-}
-.item:hover {
-  box-shadow: inset 0 0 0 transparent, inset 0 0 0 transparent,
-    inset 0 0 0 transparent, inset 0 0 0 transparent, 0 0 20px silver;
   color: transparent;
+  font-size: calc(var(--itemWidth) / 10);
+  font-weight: bold;
+  position: relative;
 }
+.item img {
+  position: absolute;
+  left: 50%; /* Centrar horizontalmente */
+  top: 50%; /* Centrar verticalmente */
+  transform: translate(-50%, -50%); /* Ajustar el centrado */
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.8s ease, visibility 0.8s ease; /* Agregar una transición de opacidad y visibilidad */
+}
+
+.item:hover img {
+  opacity: 0; /* Cambiar la opacidad a 0 al hacer hover */
+  visibility: hidden; /* Ocultar la imagen al hacer hover */
+}
+
+.item:not(:hover) img {
+  opacity: 1; /* Restablecer la opacidad a 1 cuando no se está haciendo hover */
+  visibility: visible; /* Mostrar la imagen cuando no se está haciendo hover */
+}
+
 .container-especialidades {
   --itemWidth: min(120px, 30vw);
   --itemWidthMinus: calc(-1 * var(--itemWidth));
@@ -106,40 +122,23 @@ body {
   grid-template-columns: repeat(10, calc(1vw + var(--itemWidth)));
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.item:first-of-type {
-  background-image: url(./img/iconos/001-techo.png);
+
+.item:hover {
+  box-shadow: inset 0 0 0 transparent, inset 0 0 0 transparent,
+    inset 0 0 0 transparent, inset 0 0 0 transparent, 0 0 20px rgba(63, 135, 194, 1);
+  background-color: rgba(63, 135, 194, 1);
+  color: #ffffff !important;
 }
-.item:nth-of-type(2) {
-  background-image: url(./img/iconos/002-techo-1.png);
+
+.item:hover img {
+  visibility: hidden;
 }
-.item:nth-of-type(3) {
-  background-image: url(./img/iconos/003-plomera.png);
-}
-.item:nth-of-type(4) {
-  background-image: url(./img/iconos/011-bano.png);
-}
-.item:nth-of-type(5) {
-  background-image: url(./img/iconos/005-plano.png);
-}
-.item:nth-of-type(6) {
-  background-image: url(./img/iconos/006-prototipo.png);
-}
-.item:nth-of-type(7) {
-  background-image: url(./img/iconos/007-pared-de-ladrillo.png);
-}
-.item:nth-of-type(8) {
-  background-image: url(./img/iconos/008-suelo.png);
-}
-.item:nth-of-type(9) {
-  background-image: url(./img/iconos/009-enchufe.png);
-}
-.item:nth-of-type(10) {
-  background-image: url(./img/iconos/010-porton.png);
-}
+
 .item > span {
   width: 100%;
   top: 90%;
   align-items: center;
+  text-align: center;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
