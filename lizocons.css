@@ -281,6 +281,12 @@ body {
 
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
+
+  /*IMAGEN PORTADA*/
+  .portada-content img{
+    width: 80%; /* Añadido */
+  }
+
   /*Nosotros*/
   .contenido-nosotros_logo {
     top: 30%;
