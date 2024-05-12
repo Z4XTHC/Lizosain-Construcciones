@@ -225,7 +225,7 @@ body {
 .portada-formulario {
   position: relative;
   background-image: url("https://e1.pxfuel.com/desktop-wallpaper/961/203/desktop-wallpaper-house-design-architecture-plans-distribution-plans.jpg");
-  height: 100vh;
+  height: 110vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -255,12 +255,12 @@ body {
 }
 .contenido-formulario_subtitulo {
   position: absolute;
-  top: 22%;
+  top: 19%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 6;
   text-align: center;
-  width: 50%; /* Añadido */
+  width: 60%; /* Añadido */
   color: #fff;
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
